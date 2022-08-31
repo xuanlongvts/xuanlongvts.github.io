@@ -1,17 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#000000" />
-		<meta name="description" content="Web site created using create-react-app" />
-		<link rel="apple-touch-icon" href="logo192.png" />
-		<link rel="manifest" href="manifest.json" />
-		<title>React App</title>
-	</head>
+<!DOCTYPE html><html lang="en"><head>
+		<meta charset="utf-8">
+		<link rel="icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#000000">
+		<meta name="description" content="xuanlongvts@gmail.comm portfolio">
+		<link rel="apple-touch-icon" href="logo192.png">
+<!--		<link rel="manifest" href="manifest.json" />-->
+		<title>Long Le Xuan</title>
+		<base href="/">
+		<link href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap" rel="stylesheet">
+<!--		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">-->
+		<link rel="stylesheet" href="/app-49032924fd0f62d6.css">
+		<script type="module">import init from '/portfolio-efd840bcbd33c4ea.js';init('/portfolio-efd840bcbd33c4ea_bg.wasm');</script>
+	
+<link rel="preload" href="/portfolio-efd840bcbd33c4ea_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/portfolio-efd840bcbd33c4ea.js"></head>
 	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
-		<h1 id="root">React App</h1>
-	</body>
-</html>
+	
+
+<script>(function () {
+    var protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    var url = protocol + '//' + window.location.host + '/_trunk/ws';
+    var poll_interval = 5000;
+    var reload_upon_connect = () => {
+        window.setTimeout(
+            () => {
+                // when we successfully reconnect, we'll force a
+                // reload (since we presumably lost connection to
+                // trunk due to it being killed, so it will have
+                // rebuilt on restart)
+                var ws = new WebSocket(url);
+                ws.onopen = () => window.location.reload();
+                ws.onclose = reload_upon_connect;
+            },
+            poll_interval);
+    };
+
+    var ws = new WebSocket(url);
+    ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.reload) {
+            window.location.reload();
+        }
+    };
+    ws.onclose = reload_upon_connect;
+})()
+</script></body></html>
