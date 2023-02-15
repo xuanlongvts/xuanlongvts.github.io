@@ -1,0 +1,22 @@
+{
+	"workbench.colorTheme": "Default Dark+",
+	"files.autoSave": "afterDelay",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"editor.wordWrap": "on",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.minimap.maxColumn": 140,
+	"diffEditor.codeLens": true,
+	"prettier.printWidth": 140,
+	"prettier.singleQuote": true,
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"files.exclude": {
+		"**/node_modules": true
+	},
+	"[go]": {
+		"editor.defaultFormatter": "golang.go"
+	},
+	"go.toolsManagement.autoUpdate": true
+}
